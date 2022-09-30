@@ -2,4 +2,9 @@ from django.shortcuts import render
 
 # Create your views here.
 def Fh(request):
-    return render(request, 'fh.html')
+    judul = ["Ilmu Hukum"]
+
+    konteks = {
+        'jdl': judul,
+    }
+    return render(request, 'fh.html', konteks)

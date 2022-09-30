@@ -2,4 +2,9 @@ from django.shortcuts import render
 
 # Create your views here.
 def Faperta(request):
-    return render(request, 'faperta.html')
+    judul = ["Program Studi Agribisnis", "Program Studi Agroekoteknologi", "Program Studi Ilmu Perikanan", "Program Studi Teknologi Pangan"]
+
+    konteks = {
+        'jdl': judul,
+    }
+    return render(request,'faperta.html', konteks)

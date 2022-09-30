@@ -1,24 +1,27 @@
-{% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faperta</title>
-</head>
-<body>
-    <h1>Fakultas Kedokteran</h1>
-    <p>Tersedia Jurusan :</p>
-    <ul>
-        <li>Kedokteran</li>
-        <li>Ilmu Gizi</li>
-        <li>Keperawatan S1</li>
-        <li>Diploma 3 Keperawatan</li>
-        <li>Ilmu Keolahragaan</li>
-    </ul>
-</body>
-</html>
+
+    <center>
+        <h2 style="background-color: rgb(38, 79, 45);">FAKULTAS KODEKTERAN</h2>  
+    </center>
+
+    <p></p>
+    <center><img src="https://cdn0-production-images-kly.akamaized.net/2E_X6rAR1_AxlVfQ7S27CdCHmeE=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4118964/original/062505600_1660122331-Untirta.jpg" alt="Logo Untirta" width="500px"></center>
+    <p></p>
+    <center>
+        <h4 style="background-color: rgba(135, 30, 30, 0.568) ;">SELAYANG PANDANG FAKULTAS KEDOKTERAN</h4>
+    </center>
+    <p style="font-family: 'times new roman'">Program Studi S1 Pendidikan Dokter Universitas Sultan Ageng Tirtayasa (PSPD UNTIRTA) merupakan satu-satunya program studi pendidikan dokter Perguruan Tinggi Negeri (PTN) yang terletak di Provinsi Banten. PSPD UNTIRTA berdiri sejak tahun 2019 dengan kampus utamanya berada di Kawasan Industri Cilegon Banten. Program studi ini merupakan wujud kepedulian UNTIRTA terhadap kesehatan dan pemenuhan kebutuhan dokter di Indonesia, khususnya provinsi Banten.</p>
+    <p style="font-family: 'times new roman'">Sasaran PSPD UNTIRTA adalah menghasilkan dokter layanan primer dengan keunggulan di bidang okupasi yang berkarakter dan berdaya saing di kawasan ASEAN, dengan memberikan pengalaman belajar yang baik untuk mencapai standar kompetensi dokter dan membangun rumah sakit pendidikan serta jejaringnya di wilayah provinsi banten. PSPD UNTIRTA juga memiliki tujuan untuk meningkatkan taraf kesehatan masyarakat dengan menjamin penyelengaraan suatu pendidikan kedokteran yang mempunyai  pengetahuan, keterampilan, dan sikap untuk melakukan profesi kedokteran dalam suatu sistem pelayanan yang sesuai dengan kebijaksanaan umum pemerintah sehingga, nantinya pendidikan kedokteran akan membekali lulusan dengan pengetahuan yang menyeluruh tentang kedokteran dan kesehatan.</p>
+    <p style="font-family: 'times new roman'">Dalam mencapai sasaran dan tujuannya PSPD UNTIRTA di ampu oleh Fakultas Kedokteran Universitas Indonesia (FK UI), dengan standar yang sama yang diberlakukan di FK UI, sehingga nantinya diharapkan lulusan PSPD UNTIRTA dapat bersaing dan setara dengan lulusan kedokteran universitas ternama di Indonesia.</p>
+    <center>
+        <h4 style="background-color: rgba(23, 26, 177, 0.43);">PROGRAM STUDI</h4>
+    </center>
+    <p>
+    {% for judul in jdl %}
+        <li>{{ judul }}</li>
+    {% endfor %}
+    </p>
+
 {% endblock %}

@@ -1,19 +1,28 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faperta</title>
-</head>
-<body>
-    <h1>Fakultas Hukum</h1>
-    <p>Tersedia Jurusan :</p>
-    <ul>
-        <li>Hukum</li>
-    </ul>
-</body>
-</html>
+
+    <center>
+        <h2 style="background-color: rgb(38, 79, 45);">FAKULTAS HUKUM</h2>  
+    </center>
+
+    <p></p>
+    <center><img src="https://cdn0-production-images-kly.akamaized.net/2E_X6rAR1_AxlVfQ7S27CdCHmeE=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4118964/original/062505600_1660122331-Untirta.jpg" alt="Logo Untirta" width="500px"></center>
+    <p></p>
+    <center>
+        <h4 style="background-color: rgba(135, 30, 30, 0.568) ;">SEJARAH FAKULTAS HUKUM</h4>
+    </center>
+    <p style="font-family: 'times new roman'">Fakultas Hukum Universitas Sultan Ageng Tirtayasa Banten berdiri tahun 1981, tepatnya pada tanggal 1 Oktober 1981 dengan status sebagai STIH Serang yan bertempat di Kresidenan Banten, Jl. K.H. Sam’un dan merupakan embrio lahirnya Universitas Sultan Ageng Tirtayasa Banten. Mulai tahun 1984, STIH Serang di integrasi sesuai dengan SK Mendikbud No. 0596/0/1984, menjadi Fakultas Hukum Universitas Sultan Ageng Tirtayasa Banten, yang bertempat di Jl. Raya Jakarta KM. 4 Pakupatan – Serang.</p>
+    <p style="font-family: 'times new roman'">Fakultas Hukum pada tahun 1994 memperoleh status terdaftar berdasarkan SK Mendikbud No. 0597/0/1984. Pada tahun 1994 Fakultas Hukum kembali memperoleh status penetapan terdaftar kembali berdasarkan SK Ditjen Pendidikan Tinggi No. 059/Dikti/Kep./1994. Pada tahun 2000 Fakultas Hukum memperoleh status terakreditasi dengan peringkat B, berdasarkan SK BAN-PT No. 19/BAN-PT/AK-IV/VIII/2000, dengan adanya SK Akreditasi tersebut maka Fakultas Hukum dapat menyelenggarakan proses pembelajaran secara mandiri.</p>
+    <p style="font-family: 'times new roman'">Pada tahun 2001 status Fakultas Hukum menjadi Fakultas Hukum dari Universitas Sultan Ageng Tirtayasa Banten dengan Status Negeri, berdasarkan Kepres No. 32/2001, hingga saat ini dan beralamat di Jl. Raya Jakarta KM. 4 Pakupatan–Serang. Saat ini  fakultas Hukum terakreditasi peringkat B berdasarkan SK. No. 186/SK/BAN-PT/Ak-SURV/S/VI/2014 tertanggal 28 Juni 2014.</p>
+    <center>
+        <h4 style="background-color: rgba(23, 26, 177, 0.43);">PROGRAM STUDI</h4>
+    </center>
+    <p>
+    {% for judul in jdl %}
+        <li>{{ judul }}</li>
+    {% endfor %}
+    </p>
+
 {% endblock %}
