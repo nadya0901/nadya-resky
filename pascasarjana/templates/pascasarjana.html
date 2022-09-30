@@ -1,30 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ft</title>
-</head>
-<body>
-    <h1>Pascasarjana</h1>
-    <p>Tersedia Jurusan :</p>
-    <ul>
-        <li>Doktor Pendidikan</li>
-        <li>Doktor Ilmu Akuntansi</li>
-        <li>Magister Ilmu Hukum</li>
-        <li>Magister Ilmu Pertanian</li>
-        <li>Magister Administrasi Publik</li>
-        <li>Magister Akuntansi</li>
-        <li>Magister Ilmu Komunikasi</li>
-        <li>Magister Manajemen</li>
-        <li>Magister Teknik Kimia</li>
-        <li>Pendidikan Bahasa Indonesia</li>
-        <li>Pendidikan Bahasa Inggris</li>
-        <li>Pendidikan Matematika</li>
-        <li>Teknologi Pendidikan</li>
-    </ul>
-</body>
-</html>
+
+    <center>
+        <h2 style="background-color: rgb(38, 79, 45);">PASCASARJANA</h2>  
+    </center>
+
+    <p></p>
+    <center><img src="https://cdn0-production-images-kly.akamaized.net/2E_X6rAR1_AxlVfQ7S27CdCHmeE=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4118964/original/062505600_1660122331-Untirta.jpg" alt="Logo Untirta" width="500px"></center>
+    <p></p>
+    <center>
+        <h4 style="background-color: rgba(135, 30, 30, 0.568) ;">SEJARAH PASCASARJANA</h4>
+    </center>
+    <p style="font-family: 'times new roman'">Universitas Sultan Ageng Tirtayasa tidak hanya mengasuh program Sarjana dan Diploma III. akan tetapi juga menyelenggaran pendidikan Pascasarjana. Pembukaan Program Magister (S2) Universitas Sultan Ageng Tirtayasa merupakan sebuah respon atas mendesaknya kebutuhan tenaga profesional dalam berbagai bidang seiring dengan tuntutan perubahan dibidang pendidikan dan pemerintahan. Kebutuhan sumber daya manusia yang berkualitas dan profesional merupakan suatu realitas sejalan dengan transformasi Banten yang semula hanya sebagai wilayah Pembantu Gubernur/Karesidenan yang tidak cukup hanya SDM aparatur memiliki kualifikasi pendidikan Sarjana (S1). </p>
+    <p style="font-family: 'times new roman'">karenanya untuk menjawab kebutuhan pengembangan Sumber Daya Manusia tenaga pendidik dan kependidikan serta bidang-bidang profesi lainnya kehadiran Pascasarjana merupakan sebuah keniscayaan dan menjadi suatu kebutuhan. Selain itu. Pascasarjana merupakan kawah candradimuka pengembangan keilmuan yang dapat menghasilkan karya-karya ilmiah melalui riset unggulan dan menghasilkan lulusan yang memiliki kualifikasi teoretik. metodologis, analitik, dan praktis yang bermutu dalam ilmu pendidikan, Pendidikan Bahasa. Ilmu Hukum, Administrasi Publik, Ekonomi Akuntansi dan Manajemen. </p>
+    <p style="font-family: 'times new roman'">Secara khusus Program Pascasarjana Universitas Sultan Ageng Tirtayasa bertujuan menghasilkan lulusan dengan kualifikasi sebagai berikut. menguasai teori-teori dalam disiplin Ilmu pendidikan, pendidikan bahasa, ilmu hukum. Ilmu Administrasi Publik, Ekonomi akuntansi dan Manajemen secara komprehensif dan terpadu; Mempunyai keinginan kuat untuk memajukan Ilmu pendidikan, pendidikan bahasa, ilmu hukum. Ilmu Administrasi Publik, Ekonomi Akuntansi dan Manajemen: Memiliki kepekaan terhadap perubahan perubahan lingkungan akademik maupun lingkungan kerja, yang diwujudkan dalam kegiatan penelitian dan pengabdian kepada masyarakat.</p>
+    <center>
+        <h4 style="background-color: rgba(23, 26, 177, 0.43);">PROGRAM STUDI</h4>
+    </center>
+    <p>
+    {% for judul in jdl %}
+        <li>{{ judul }}</li>
+    {% endfor %}
+    </p>
+
 {% endblock %}
