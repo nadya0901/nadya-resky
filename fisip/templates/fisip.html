@@ -5,10 +5,9 @@
     <center>
         <h2 style="background-color: rgb(38, 79, 45);">FAKULTAS ILMU SOSIAL DAN ILMU POLITIK</h2>  
     </center>
-
-    <p></p>
-    <center><img src="https://cdn0-production-images-kly.akamaized.net/2E_X6rAR1_AxlVfQ7S27CdCHmeE=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4118964/original/062505600_1660122331-Untirta.jpg" alt="Logo Untirta" width="500px"></center>
-    <p></p>
+    <center>
+        <img src="{% static 'image/fisip.png' %}" alt="foto" width="300px">
+    </center>
     <center>
         <h4 style="background-color: rgba(135, 30, 30, 0.568) ;">SEJARAH FAKULTAS ILMU SOSIAL DAN ILMU POLITIK</h4>
     </center>
@@ -23,5 +22,82 @@
         <li>{{ judul }}</li>
     {% endfor %}
     </p>
+    {% for judul in jdl %}
+    <li>{{ judul }}</li>
+{% endfor %}
+</p>
+<h2>Daftar Nama Dosen Fisip</h2>
+<table class="table table-success table-striped">
+    <tr>
+        <th>NIP</th>
+        <th>Nama</th>
+        <th>Tanggal Lahir</th>
+        <th>Email</th>
+        <th>Fakultas</th>
+        <th>Prodi</th>
+        <th>Alamat</th>
+        <th>Foto</th>
+    </tr>
+    {% for dosen in dataDosen %}
+    <tr>
+        <td>{{ dosen.NIP }}</td>
+        <td>{{ dosen.nama }}</td>
+        <td>{{ dosen.tanggal_lahir }}</td>
+        <td>{{ dosen.email }}</td>
+        <td>{{ dosen.fakultas }}</td>
+        <td>{{ dosen.prodi }}</td>
+        <td>{{ dosen.alamat }}</td>
+        <td><img src="{{ dosen.foto }}" alt="Foto" width="100px"></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h2>Daftar Nama Mahasiswa Fisip</h2>
+<table class="table table-success table-striped">
+    <tr>
+        <th>NIM</th>
+        <th>Nama</th>
+        <th>Tanggal Lahir</th>
+        <th>Email</th>
+        <th>Fakultas</th>
+        <th>Prodi</th>
+        <th>Foto</th>
+    </tr>
+    {% for mahasiswa in dataMahasiswa %}
+    <tr>
+        <td>{{ mahasiswa.NIM }}</td>
+        <td>{{ mahasiswa.nama }}</td>
+        <td>{{ mahasiswa.tanggal_lahir }}</td>
+        <td>{{ mahasiswa.email }}</td>
+        <td>{{ mahasiswa.fakultas }}</td>
+        <td>{{ mahasiswa.prodi }}</td>
+        <td><img src="{{ mahasiswa.foto }}" alt="Foto" width="100px"></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h2>Daftar Nama Staff Fisip</h2>
+<table class="table table-success table-striped">
+    <tr>
+        <th>NIP</th>
+        <th>Nama</th>
+        <th>Tanggal Lahir</th>
+        <th>Email</th>
+        <th>Unit</th>
+        <th>Alamat</th>
+        <th>Foto</th>
+    </tr>
+    {% for mahasiswa in dataMahasiswa %}
+    <tr>
+        <td>{{ staff.NIM }}</td>
+        <td>{{ staff.nama }}</td>
+        <td>{{ staff.tanggal_lahir }}</td>
+        <td>{{ staff.email }}</td>
+        <td>{{ staff.unit }}</td>
+        <td>{{ staff.alamat }}</td>
+        <td>{{ staff.foto }}</td>
+    </tr>
+    {% endfor %}
+</table>
 
 {% endblock %}
