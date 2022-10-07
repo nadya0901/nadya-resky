@@ -5,11 +5,9 @@ from django.db import models
 class Dosen(models.Model):
     NIP = models.CharField(max_length=200)
     nama = models.CharField(max_length=200)
-    tanggal_lahir = models.CharField(max_length=200)
+    NIDN = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
-    fakultas = models.CharField(max_length=200)
-    prodi = models.CharField(max_length=200)
-    alamat_rumah = models.CharField(max_length=200)
+    jabatan = models.CharField(max_length=200)
     foto = models.CharField(max_length=500, null=True)
 
 # def _str_(self):
