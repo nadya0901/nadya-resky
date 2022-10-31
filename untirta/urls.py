@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from fkip.views import Fkip
+from fkip.views import fkip
+from fkip.views import *
 from faperta.views import Faperta
 from feb.views import Feb
 from fh.views import Fh
@@ -28,7 +29,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('fkip/', Fkip, name="fkip"),
+    path('fkip/', fkip, name="fkip"),
     path('faperta/', Faperta, name="faperta"),
     path('feb/', Feb, name="feb"),
     path('fh/', Fh, name="fh"),
@@ -36,4 +37,11 @@ urlpatterns = [
     path('fisip/', Fisip, name="fisip"),
     path('ft/', Ft, name="ft"),
     path('pascasarjana/', Pascasarjana, name="pascasarjana"),
+    path('tambah-dosen/', tambah_dosen, name='tambah_dosen'),
+    path('dosen/ubah/<int:id_dosen>', ubah_dosen, name='ubah_dosen'),
+    path('dosen/hapus/<int:id_dosen>', hapus_dosen, name='hapus_dosen'),
+    path('tambah-staff//', tambah_staff, name='tambah_staff'),
+    path('staff/ubah/<int:id_staff>', ubah_staff, name='ubah_staff'),
+    path('tambah-mahasiswa/', tambah_mahasiswa, name='tambah_mahasiswa'),
+    path('mahasiswa/ubah/<int:id_mahasiswa>', ubah_mahasiswa, name='ubah_mahasiswa'),
 ]
